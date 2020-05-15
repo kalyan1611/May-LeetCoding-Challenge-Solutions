@@ -28,7 +28,6 @@ class Trie:
     def startsWith(self, prefix: str) -> bool:
         prev = self.dictionary
         for i in prefix:
-            print(i)
             if i not in prev:
                 return False
             else:

@@ -46,8 +46,6 @@ class Solution {
             } else if (preorder[preorderIndex] > topTreeNode.val &&
                 topLimit.isInLimits(preorder[preorderIndex])) {
                 
-                treeStack.pop();
-                limitsStack.pop();
                 topTreeNode.right = treeNode;
                 limitsStack.push(new LimitPair(topTreeNode.val, topLimit.max));
                 treeStack.push(treeNode);

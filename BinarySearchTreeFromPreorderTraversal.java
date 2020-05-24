@@ -37,9 +37,9 @@ class Solution {
 
             if (preorder[preorderIndex] < topTreeNode.val &&
                 topLimit.isInLimits(preorder[preorderIndex])) {
-
-                limitsStack.push(new LimitPair(topLimit.min, topTreeNode.val));
+                
                 topTreeNode.left = treeNode;
+                limitsStack.push(new LimitPair(topLimit.min, topTreeNode.val));
                 treeStack.push(treeNode);
                 preorderIndex++;
                 

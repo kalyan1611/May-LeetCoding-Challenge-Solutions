@@ -38,15 +38,15 @@ class Solution {
                     setA = setB;
                     setB = temp;
                 }
-                for (Person child : current.haters) {
-                    if (visited[child.id]==1) {
+                for (Person hater: current.haters) {
+                    if (visited[hater.id]==1) {
                         continue;
                     }
-                    if (setA.contains(child.id)) {
+                    if (setA.contains(hater.id)) {
                         return false;
                     }
-                    setB.add(child.id);
-                    queue.add(child);
+                    setB.add(hater.id);
+                    queue.add(hater);
                 }
             }
         }
